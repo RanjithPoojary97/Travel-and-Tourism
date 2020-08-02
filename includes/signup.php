@@ -16,9 +16,13 @@ if(isset($_POST['submit']))
 	$lastInsertId = $dbh->lastInsertId();
 	if($lastInsertId)
 	{
-		$_SESSION['msg']="You are successfully registered. Now you can login ";
-		echo "<script>alert('user created');</script>";
-		//header('location:thankyou.php');
+
+        $_SESSION['msg']="You are successfully registered. Now you can login ";
+        echo "<script>alert('user created');</script>";
+        //header('location:thankyou.php');
+
+       
+		
 	}
 	else 
 	{

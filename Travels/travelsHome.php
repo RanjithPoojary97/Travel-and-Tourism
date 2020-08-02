@@ -124,7 +124,7 @@ body
 }
 
 .card{
-    top: 15%;
+    top: 75px;
 
 }
 

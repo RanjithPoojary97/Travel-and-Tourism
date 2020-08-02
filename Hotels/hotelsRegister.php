@@ -215,7 +215,7 @@ body{
 
 .card{
     
-top:10%;
+top:70px;
 }
 
 

@@ -60,7 +60,7 @@ if(isset($_POST['packageBookingSubmit']))
 
 
       
-    $mail->Body    = '<html>Hi '.$email.',<br><br>Booking successfully placed.<br><br>
+    $mail->Body    = '<html>Hi <br><br>Booking successfully placed.<br><br>
 
  
     <table style="border: 1px solid black; border-collapse: collapse;">

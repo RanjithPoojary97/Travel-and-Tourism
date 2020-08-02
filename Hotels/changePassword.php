@@ -12,15 +12,15 @@ if(strlen($_SESSION['hlogin'])==0)
 			$curpassword=md5($_POST['curpassword']);
 			$newpassword=md5($_POST['newpassword']);
 			$hemail=$_SESSION['hlogin'];
-			$sql ="SELECT hotel_pass FROM travels WHERE hotel_email=:hemail and hotel_pass=:curpassword";
+			$sql ="SELECT hotel_pass FROM hotels WHERE hotel_email=:hemail and hotel_pass=:curpassword";
 			$query= $dbh -> prepare($sql);
-			$query-> bindParam(':hemail', $temail, PDO::PARAM_STR);
+			$query-> bindParam(':hemail', $hemail, PDO::PARAM_STR);
 			$query-> bindParam(':curpassword', $curpassword, PDO::PARAM_STR);
 			$query-> execute();
 			$results = $query -> fetchAll(PDO::FETCH_OBJ);
 			if($query -> rowCount() > 0)
 			{
-				$con="update hotel set hotel_pass=:newpassword where hotel_email=:hemail";
+				$con="update hotels set hotel_pass=:newpassword where hotel_email=:hemail";
 				$chngpwd1 = $dbh->prepare($con);
 				$chngpwd1-> bindParam(':hemail', $hemail, PDO::PARAM_STR);
 				$chngpwd1-> bindParam(':newpassword', $newpassword, PDO::PARAM_STR);

@@ -101,7 +101,7 @@ body,
 }
 
 .card{
-    top: 25%;
+    top: 70px;
 
 }
 
